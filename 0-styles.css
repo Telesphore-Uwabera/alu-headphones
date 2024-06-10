@@ -1,0 +1,74 @@
+html {
+    height: 100%;
+    background: url('./images/headphones_hero_1.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 50px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    padding: 10px 20px;
+    width: 1200px;
+    height: 32px;
+    margin-top: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+}
+
+.navbar .logo img {
+    height: 40px; /* Adjust the height as needed */
+}
+
+section {
+    padding: 20px;
+}
+
+section h2 {
+    margin-top: 0;
+}
+.Home {
+    width: 637px;
+    height: 313px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color:white;
+    margin: 0 auto;
+}
+.bold-text {
+    font-weight: bold;
+    font-size: 32px;
+}
+.bold-text1 {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+.call {
+    background-color: #FF6565;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 30px;
+}
+
+.call:hover {
+    background-color: #FF0000;
+}

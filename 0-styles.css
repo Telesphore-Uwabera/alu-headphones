@@ -2,6 +2,9 @@
     height: 100%;
     background: url('./images/headphones_hero_1.jpg') no-repeat center center fixed;
     background-size: cover;
+    background-attachment: scroll;
+    max-width: 1000px;
+    margin: 0 auto; /* Center the section horizontally */
 }
 
 body {
@@ -18,7 +21,6 @@ body {
     background-size: cover;
     height: 100px;
 }
-
 .navbar a {
     color: white;
     text-decoration: none;
@@ -26,11 +28,12 @@ body {
 }
 
 .navbar .logo img {
-    height: 40px; /* Adjust the height as needed */
+    height: 40px;
 }
 
 section {
     padding: 20px;
+    min-height: 500px;
 }
 
 section h2 {
@@ -71,6 +74,7 @@ section h2 {
 .call:hover {
     background-color: #FF0000;
 }
+
 
 .navbar {
     display: flex;
@@ -140,5 +144,26 @@ section h2 {
 
     .hamburger {
         display: flex;
+    }
+}
+@media (max-width: 768px) {
+    .Home {
+        width: 60%;
+        height: auto;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .bold-text {
+        font-size: 24px;
+    }
+
+    .bold-text1 {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    .call {
+        font-size: 16px;
+        padding: 10px 20px;
     }
 }

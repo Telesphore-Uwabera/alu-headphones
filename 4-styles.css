@@ -3,6 +3,8 @@
     background: url('./images/headphones_hero_1.jpg') no-repeat center center fixed;
     background-size: cover;
     background-attachment: scroll;
+    max-width: 1000px;
+    margin: 0 auto; /* Center the section horizontally */
 }
 
 body {
@@ -13,13 +15,12 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: top;
+    align-items: center;  
     padding: 10px 20px;
-    width: 1200px;
-    height: 32px;
-    margin-top: 0;
+    width: 100%; 
+    background-size: cover;
+    height: 100px;
 }
-
 .navbar a {
     color: white;
     text-decoration: none;
@@ -73,98 +74,221 @@ section h2 {
 .call:hover {
     background-color: #FF0000;
 }
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    padding: 10px 20px;
+    width: 100%; 
+    background-size: cover;
+    height: 100px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+}
+
+.navbar .logo img {
+    height: 40px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    height: 2px;
+    width: 25px;
+    background: white;
+    margin: 4px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .logo img {
+        height: 30px;
+        margin-bottom: 10px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+@media (max-width: 768px) {
+    .Home {
+        width: 60%;
+        height: auto;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .bold-text {
+        font-size: 24px;
+    }
+
+    .bold-text1 {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    .call {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+/* General Styles for "What We Do" Section */
 .what-we-do {
     text-align: center;
-    padding:100px;
-    margin-left: 250px;
-    margin-right: 250px;
+    padding: 20px;
+    margin: 0 auto; /* Center the text content */
+    max-width: 1000px; /* Ensure the section doesn't exceed 1000px */
+    color: black;
 }
+
+.what-we-do p {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 60%; /* Ensure the text content doesn't exceed the container width */
+}
+
 .what-we-do-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin: 0 auto;
+    max-width: 1000px;
+    margin: 0 auto; /* Center the container */
     padding: 20px;
 }
+
 .what-we-do-box {
-    width: 250px;
-    margin: 10px;
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 23%; /* Slightly less than 25% to allow spacing */
+    margin: 1%; /* Add a small margin for spacing between boxes */
 }
 
 .what-we-do-box img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Ensure the images take the full width of their container */
+    height: 200px;
+    object-fit: cover;
     border-radius: 10px;
+    transition: transform 0.5s;
 }
 
-.what-we-do-box p {
-    margin: 10px 0 0 0;
-    color: #333;
-}
-.what-we-do-box img {
-    width: 120px;
-    height: 100px; 
-    object-fit: cover; 
-    border-radius: 10px;
-    transition: transform 0.5s; 
-}
-.what-we-do-box:hover img {
-    transform: scale(1.1);
+@media (max-width: 768px) {
+    .what-we-do-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .what-we-do-box {
+        width: 48%; /* Two boxes per row */
+        margin-bottom: 10px;
+    }
 }
 
-.what-we-do-box:hover {
-    transform: scale(1.05);
+@media (max-width: 480px) {
+    .what-we-do-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .what-we-do-box {
+        width: 90%; /* Full width for each box */
+        margin-bottom: 10px;
+    }
 }
-.our-results p {
-    text-align: center;
-    padding:100px;
-    margin-left: 250px;
-    margin-right: 250px; 
-    color:white;
+
+@media (max-width: 1200px) {
+    .what-we-do {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .what-we-do p {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 }
+
+/* General Styles for "Our Results" Section */
 .our-results {
     height: 100%;
     background: url('./images/headphones_hero_2.jpg') no-repeat center center fixed;
     background-size: cover;
     background-attachment: scroll;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto; /* Center the section */
+    color: white;
+}
+
+.our-results h2 {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 60%;
+}
+.our-results p {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 60%;
 }
 .our-results0 {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin: 0 auto;
+    max-width: 1000px;
+    margin: 0 auto; /* Center the container */
     padding: 20px;
 }
 
 .our-results1 {
     position: relative;
     text-align: center;
+    width: 23%; /* Slightly less than 25% to allow spacing */
+    margin: 1%; /* Add a small margin for spacing between boxes */
 }
+
 .our-results1 img {
     object-fit: cover; 
     border-radius: 10px;
     transition: transform 0.5s;
-}
-.our-results1 img {
-    width: 200px; 
-    height: auto;
-}
-
-.our-results1 {
-    position: relative;
-    text-align: center;
-    width: 200px; 
-    margin: 0 auto;
-}
-
-.our-results1 img {
     width: 100%; 
     height: auto;
 }
@@ -183,44 +307,66 @@ section h2 {
     color: white;
     text-align: center;
 }
-.overlay {
-    margin-top: 0.5em;
-}
-.contact-us {
-    padding: 50px 20px;
-    color: white;
-    text-align: center;
+
+@media (max-width: 768px) {
+    .our-results0 {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .our-results1 {
+        width: 48%; /* Two boxes per row */
+        margin-bottom: 10px;
+    }
 }
 
-.contact-us h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
+@media (max-width: 480px) {
+    .our-results0 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .our-results1 {
+        width: 90%; /* Full width for each box */
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .our-results {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .our-results p {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+.contact-us {
+    max-width: 400px; /* Set maximum width to 400px */
+    margin: 0 auto; /* Center the section horizontally */
+    padding: 20px; /* Add some padding for spacing */
+    text-align: center; /* Center the content */
 }
 
 .contact-us form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Add some space between the heading and the form */
 }
 
 .contact-us label {
-    display: block;
-    margin: 10px 0 10px;
-    font-size: 18px;
-    text-align: center;
+    display: block; /* Display labels as block elements for better alignment */
+    margin-bottom: 5px; /* Add some space below each label */
 }
 
 .contact-us input,
 .contact-us textarea {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    width: 100%; /* Set input fields to full width */
+    padding: 10px; /* Add padding for better appearance */
+    margin-bottom: 15px; /* Add some space between input fields */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 .contact-us button {
@@ -237,6 +383,7 @@ section h2 {
 .contact-us button:hover {
     background-color: #FF0000;
 }
+
 .footer {
     background-color: #0D1B2A;
     padding: 20px 0;
@@ -254,7 +401,7 @@ section h2 {
 }
 
 .footer-logo img {
-    height: 40px;
+    height: auto;
 }
 
 .footer-social a {
@@ -276,4 +423,68 @@ section h2 {
     margin-top: 10px;
     font-size: 14px;
     color: #BBBBBB;
+}
+.footer {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center; /* Center the content */
+    padding: 20px;
+    position: relative; /* Position for absolute positioning of footer text */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Vertically center items */
+}
+
+.footer-logo {
+    text-align: left; /* Align logo to the left */
+}
+
+.footer-social {
+    text-align: right; /* Align social icons to the right */
+}
+
+.footer-logo img {
+    max-width: 100px; /* Limit maximum width of logo */
+}
+
+.footer-social a {
+    display: inline-block; /* Display social links as block */
+}
+
+.footer-text {
+    position: absolute; /* Position at the bottom */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center; /* Center footer text */
+}
+/* Media query for mobile screen sizes */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .footer-logo,
+    .footer-social {
+        text-align: center; /* Center logo and social icons */
+    }
+
+    .footer-logo img {
+        max-width: 80px; /* Decrease logo size for mobile */
+        margin-bottom: 10px; /* Add space between logo and social icons */
+    }
+
+    .footer-social a {
+        display: block; /* Display social links as block */
+        margin-bottom: 5px; /* Add space between social icons */
+    }
+
+    .footer-text {
+        position: relative; /* Remove absolute positioning */
+        margin-top: 20px; /* Add space between content and footer text */
+    }
 }

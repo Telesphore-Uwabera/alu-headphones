@@ -12,11 +12,11 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: top;
+    align-items: center;  
     padding: 10px 20px;
-    width: 1200px;
-    height: 32px;
-    margin-top: 0;
+    width: 100%; 
+    background-size: cover;
+    height: 100px;
 }
 
 .navbar a {
